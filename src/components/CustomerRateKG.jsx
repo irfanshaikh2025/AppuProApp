@@ -69,7 +69,7 @@ export const CustomerRateKG = () => {
             </Grid>
 
             <Grid size={6}>
-              <Button onClick={handleNext} variant="contained" fullWidth>Next</Button>
+              <Button disabled={!(kg && customerRate && ourRate)} onClick={handleNext} variant="contained" fullWidth>Next</Button>
             </Grid>
           </Grid>
 
