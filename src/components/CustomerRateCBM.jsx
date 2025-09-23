@@ -2,6 +2,8 @@ import React,{useState} from "react";
 import { Button, Grid, TextField, Card, CardContent, Box } from "@mui/material";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+
+
 export const CustomerRateCBM = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate()
@@ -17,11 +19,11 @@ export const CustomerRateCBM = () => {
     }
     dispatch(actionCbm)
 
-    const actionCusomerRate = {
+    const actionCustomerRate = {
       type : "CUSTOMER_RATE",
       payload : customerRate
     }
-    dispatch(actionCusomerRate)
+    dispatch(actionCustomerRate)
 
     const actionOurRate = {
       type : "OUR_RATE",
@@ -67,7 +69,7 @@ export const CustomerRateCBM = () => {
             </Grid>
 
             <Grid size={6}>
-              <Button disabled={!(cbm && customerRate && ourRate)} onClick={handleNext} variant="contained" fullWidth>Next</Button>
+              <Button disabled={!(cbm && customerRate > ourRate && ourRate)} onClick={handleNext} variant="contained" fullWidth>Next</Button>
             </Grid>
           </Grid>
 

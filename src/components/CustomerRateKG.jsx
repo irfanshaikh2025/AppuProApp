@@ -5,12 +5,12 @@ import { useNavigate } from "react-router-dom";
 
 export const CustomerRateKG = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate()
 
     const [kg, setKg] = useState(0)
     const [customerRate, setCustomeRate]= useState(0);
     const [ourRate, setOurRate] = useState(0)
-
-    const navigate = useNavigate()
+    
 
     const handleNext = () =>{
         if(kg && customerRate && ourRate){
@@ -75,7 +75,7 @@ const handleCancel = () => {
             </Grid>
 
             <Grid size={6}>
-              <Button disabled={!(kg && customerRate && ourRate)} onClick={handleNext} variant="contained" fullWidth>Next</Button>
+              <Button disabled={!(kg && customerRate > ourRate && ourRate)} onClick={handleNext} variant="contained" fullWidth>Next</Button>
             </Grid>
           </Grid>
 
