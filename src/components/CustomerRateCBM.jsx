@@ -10,7 +10,6 @@ export const CustomerRateCBM = () => {
   const [customerRate, setCustomerRate] = useState(0);
   const [ourRate, setOurRate] = useState(0)
 
-
   const handleNext =()=>{
     const actionCbm = {
       type : "CBM",
