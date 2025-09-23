@@ -30,6 +30,13 @@ export const CustomerRateCBM = () => {
     dispatch(actionOurRate)
   }
 
+  const handleCancel = () => {
+    // Handle cancel action
+    setCbm(0);
+    setCustomerRate(0);
+    setOurRate(0); 
+  }
+
   return (
     <Box
       sx={{
@@ -56,11 +63,11 @@ export const CustomerRateCBM = () => {
             </Grid>
 
             <Grid size={6}>
-              <Button variant="outlined" fullWidth>Cancel</Button>
+              <Button onClick={handleCancel} variant="outlined" fullWidth>Cancel</Button>
             </Grid>
 
             <Grid size={6}>
-              <Button onClick={handleNext} variant="contained" fullWidth>Next</Button>
+              <Button disabled={!(cbm && customerRate && ourRate)} onClick={handleNext} variant="contained" fullWidth>Next</Button>
             </Grid>
           </Grid>
 

@@ -35,6 +35,12 @@ export const CustomerRateKG = () => {
         navigate("/customerratecbm")
     }
 }
+const handleCancel = () => {
+    // Handle cancel action
+    setKg(0);
+    setCustomeRate(0);
+    setOurRate(0);
+}
 
 
 
@@ -65,7 +71,7 @@ export const CustomerRateKG = () => {
             </Grid>
 
             <Grid size={6}>
-              <Button variant="outlined" fullWidth>Cancel</Button>
+              <Button onClick={handleCancel} variant="outlined" fullWidth>Cancel</Button>
             </Grid>
 
             <Grid size={6}>
