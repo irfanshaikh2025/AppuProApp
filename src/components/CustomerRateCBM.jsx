@@ -8,9 +8,9 @@ export const CustomerRateCBM = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate()
 
-  const [cbm, setCbm] = useState(0);
-  const [customerRate, setCustomerRate] = useState(0);
-  const [ourRate, setOurRate] = useState(0)
+  const [cbm, setCbm] = useState();
+  const [customerRate, setCustomerRate] = useState();
+  const [ourRate, setOurRate] = useState()
 
   const handleNext =()=>{
     const actionCbm = {
@@ -34,9 +34,9 @@ export const CustomerRateCBM = () => {
 
   const handleCancel = () => {
     // Handle cancel action
-    setCbm(0);
-    setCustomerRate(0);
-    setOurRate(0); 
+    setCbm();
+    setCustomerRate();
+    setOurRate(); 
   }
 
   return (
@@ -53,15 +53,15 @@ export const CustomerRateCBM = () => {
         <CardContent>
           <Grid container spacing={2}>
             <Grid size={12}>
-              <TextField value={cbm} onChange={(e)=>setCbm(e.target.value)} label="Enter CBM" variant="outlined" fullWidth />
+              <TextField value={cbm} onChange={(e)=>setCbm(Number(e.target.value))} label="Enter CBM" variant="outlined" fullWidth />
             </Grid>
 
             <Grid size={12}>
-              <TextField value={customerRate} onChange={(e)=>setCustomerRate(e.target.value)} label="Enter Customer Rate" variant="outlined" fullWidth />
+              <TextField value={customerRate} onChange={(e)=>setCustomerRate(Number(e.target.value))} label="Enter Customer Rate" variant="outlined" fullWidth />
             </Grid>
 
             <Grid size={12}>
-              <TextField value={ourRate} onChange={(e)=>setOurRate(e.target.value)} label="Enter Our Rate" variant="outlined" fullWidth />
+              <TextField value={ourRate} onChange={(e)=>setOurRate(Number(e.target.value))} label="Enter Our Rate" variant="outlined" fullWidth />
             </Grid>
 
             <Grid size={6}>
