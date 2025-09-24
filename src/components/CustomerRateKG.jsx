@@ -11,28 +11,20 @@ export const CustomerRateKG = () => {
     const [customerRate, setCustomerRate]= useState();
     const [ourRate, setOurRate] = useState();
 
-
     const handleNext = () =>{
         if(kg && customerRate && ourRate){
-        const actionKg ={
-            type : "KG",
-            payload : kg
-        }
-        dispatch(actionKg)
-   
-        const actionCustomerRate = {
-            type : "CUSTOMER_RATE",
-            payload : customerRate
-        }
-        dispatch(actionCustomerRate)
-   
-        const actionOurRate = {
-            type : "OUR_RATE",
-            payload : ourRate
-        }
-        dispatch(actionOurRate);
-
-        navigate("/customerratecbm")
+          const type ="BY_WEIGTH";
+          const payload = {
+            kg,
+            customerRate,
+            ourRate
+          }  
+          const action = {
+              type,
+              payload
+            }
+            dispatch(action);
+            navigate("/customerratecbm")
     }
 }
 const handleCancel = () => {

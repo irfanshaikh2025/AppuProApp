@@ -1,10 +1,8 @@
 import { combineReducers } from "redux";
-import kgReducer from "./kgReducer";
-import cbmReducer from "./cbmReducer";
+import transportReducer from "./transportReducer";
 
 const rootReducer = combineReducers({
-    kgReducer,
-    cbmReducer
+    transportReducer
 });
 
 export default rootReducer;
