@@ -13,24 +13,19 @@ export const CustomerRateCBM = () => {
   const [ourRate, setOurRate] = useState()
 
   const handleNext =()=>{
-    const actionCbm = {
-      type : "CBM",
-      payload : cbm
+    const type = "BY_CBM";
+    const payload = {
+      cbm,
+      customerRate,
+      ourRate
     }
-    dispatch(actionCbm)
-
-    const actionCustomerRate = {
-      type : "CUSTOMER_RATE",
-      payload : customerRate
+    const action = {
+      type,
+      payload
     }
-    dispatch(actionCustomerRate)
-
-    const actionOurRate = {
-      type : "OUR_RATE",
-      payload : ourRate
+    dispatch(action);
+    navigate("/")
     }
-    dispatch(actionOurRate)
-  }
 
   const handleCancel = () => {
     // Handle cancel action
@@ -69,7 +64,7 @@ export const CustomerRateCBM = () => {
             </Grid>
 
             <Grid size={6}>
-              <Button disabled={!(cbm && customerRate > ourRate && ourRate)} onClick={handleNext} variant="contained" fullWidth>Next</Button>
+              <Button disabled={!(cbm && customerRate > ourRate)} onClick={handleNext} variant="contained" fullWidth>Next</Button>
             </Grid>
           </Grid>
 
