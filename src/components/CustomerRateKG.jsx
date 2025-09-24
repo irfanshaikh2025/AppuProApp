@@ -7,10 +7,10 @@ export const CustomerRateKG = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate()
 
-    const [kg, setKg] = useState(0)
-    const [customerRate, setCustomeRate]= useState(0);
-    const [ourRate, setOurRate] = useState(0)
-    
+    const [kg, setKg] = useState()
+    const [customerRate, setCustomerRate]= useState();
+    const [ourRate, setOurRate] = useState();
+
 
     const handleNext = () =>{
         if(kg && customerRate && ourRate){
@@ -37,9 +37,9 @@ export const CustomerRateKG = () => {
 }
 const handleCancel = () => {
     // Handle cancel action
-    setKg(0);
-    setCustomeRate(0);
-    setOurRate(0);
+    setKg();
+    setCustomerRate();
+    setOurRate();
 }
 
 
@@ -59,23 +59,25 @@ const handleCancel = () => {
 
           <Grid container spacing={2}>
             <Grid size={12}>
-              <TextField value={kg} onChange={(e)=>setKg(e.target.value)}  type="number" label="Enter KG" variant="outlined" fullWidth />
+              <TextField value={kg} onChange={(e)=>setKg(Number(e.target.value))}  type="number" label="Enter KG" variant="outlined" fullWidth />
             </Grid>
 
             <Grid size={12}>
-              <TextField value={customerRate} onChange={(e)=>setCustomeRate(e.target.value)} type="number" label="Enter Customer Rate" variant="outlined" fullWidth />
+              <TextField value={customerRate} onChange={(e)=>setCustomerRate(Number(e.target.value))} type="number" label="Enter Customer Rate" variant="outlined" fullWidth />
             </Grid>
 
             <Grid size={12}>
-              <TextField value={ourRate} onChange={(e)=>setOurRate(e.target.value)} type="number" label="Enter Our Rate" variant="outlined" fullWidth />
+              <TextField value={ourRate} onChange={(e)=>setOurRate(Number(e.target.value))} type="number" label="Enter Our Rate" variant="outlined" fullWidth />
             </Grid>
 
             <Grid size={6}>
               <Button onClick={handleCancel} variant="outlined" fullWidth>Cancel</Button>
             </Grid>
 
+            {/* {console.log(customerRate > ourRate,"===============>",kg,"---", customerRate, "=====", ourRate) } */}
+            
             <Grid size={6}>
-              <Button disabled={!(kg && customerRate > ourRate && ourRate)} onClick={handleNext} variant="contained" fullWidth>Next</Button>
+              <Button disabled={!(kg && (customerRate > ourRate))} onClick={handleNext} variant="contained" fullWidth>Next</Button>
             </Grid>
           </Grid>
 
