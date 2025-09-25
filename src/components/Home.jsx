@@ -9,7 +9,7 @@ import { CustomerRateCBM } from "./CustomerRateCBM";
     return(
         <React.Fragment>
             <Typography variant="h4" align="center" gutterBottom>
-                Appu Remittance App
+                Appu Imports Services
             </Typography>
         </React.Fragment>
     )
