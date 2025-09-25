@@ -1,19 +1,16 @@
 import React from "react";
 import { Card, CardContent, Grid, Typography } from "@mui/material";
+import { CustomerRateKG } from "./CustomerRateKG";
+import { CustomerRateCBM } from "./CustomerRateCBM";
 
 
 
  export const Home = () =>{
     return(
         <React.Fragment>
-            <Card>
-                <CardContent>
-                        <Grid size={12}>
-                            <Typography variant="h2" sx={{textAlign: "center", fontFamily:"sans-serif", fontWeight: "bold"}}>Appu Remittance App</Typography>
-                        </Grid>
-                </CardContent>
-            </Card>
-            
+            <Typography variant="h4" align="center" gutterBottom>
+                Appu Remittance App
+            </Typography>
         </React.Fragment>
     )
 }

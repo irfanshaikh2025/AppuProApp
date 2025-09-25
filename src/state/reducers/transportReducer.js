@@ -1,6 +1,6 @@
 const initialState = {
     byweight:{},
-    bycbm:{}
+    bycbm:{},
 }
 
 const transportReducer = (state=initialState, action)=>{
@@ -14,7 +14,8 @@ const transportReducer = (state=initialState, action)=>{
             return{
                 ...state,
                 bycbm : action.payload
-            }            
+            }      
+        
             default:
                 return state;
     }
