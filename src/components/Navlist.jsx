@@ -13,6 +13,7 @@ export const NavList = () =>{
                         <NavItem path="/" title="Home" />
                         <NavItem path="/customerratekg" title="CustomerRateKG" />
                         <NavItem path="/customerratecbm" title="CustomerRateCBM" />
+                        <NavItem path="/suggestedrate" title="SuggestedRate" />
                     </Grid>
                 </CardContent>
             </Card>

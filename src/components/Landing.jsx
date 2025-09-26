@@ -4,6 +4,7 @@ import { Home } from "./Home";
 import { CustomerRateKG } from "./CustomerRateKG";
 import { CustomerRateCBM } from "./CustomerRateCBM";
 import { NavList } from "./Navlist";
+import { SuggestedRate } from "./SuggestedRate";
 
  
 export const Landing = () =>{
@@ -15,6 +16,7 @@ export const Landing = () =>{
             <Route path="/" element={<Home/>} />
             <Route path="/customerratekg" element={<CustomerRateKG/>} />
             <Route path="/customerratecbm" element={<CustomerRateCBM/>} />
+            <Route path="/suggestedrate" element={<SuggestedRate/>} />
         </Routes>
         </BrowserRouter>
 

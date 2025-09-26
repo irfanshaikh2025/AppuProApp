@@ -24,7 +24,7 @@ export const CustomerRateCBM = () => {
       payload
     }
     dispatch(action);
-    navigate("/")
+    navigate("/suggestedrate")
     }
 
   const handleCancel = () => {
