@@ -1,12 +1,8 @@
 import React from "react";
 import {BrowserRouter, Routes, Route} from "react-router-dom"
-import { Home } from "./Home";
-import { CustomerRateKG } from "./CustomerRateKG";
-import { CustomerRateCBM } from "./CustomerRateCBM";
-import { NavList } from "./Navlist";
-import { SuggestedRate } from "./SuggestedRate";
+import { Home, CustomerRateKG, CustomerRateCBM, SuggestedRate, NavList } from "./index";
 
- 
+
 export const Landing = () =>{
     return(
         <React.Fragment>
@@ -19,7 +15,6 @@ export const Landing = () =>{
             <Route path="/suggestedrate" element={<SuggestedRate/>} />
         </Routes>
         </BrowserRouter>
-
         </React.Fragment>
     )
 }

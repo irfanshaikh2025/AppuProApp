@@ -9,15 +9,17 @@ export const SuggestedRate = () =>{
     const Selbycbm = useSelector((state)=>state.transportReducer.bycbm);
 
     const Suggested = getSuggestedRate(Selbyweight, Selbycbm);
+
     return(
         <Box sx={{display:"flex", justifyContent:"center", alignItems:"center", height:"100vh"}}>
             <Card sx={{width:400, p:2, boxShadow:3, borderRadius:2}}>
                 <CardContent>
-                    <Typography variant="h6" sx={{textAlign:"center"}}>
-                        {Suggested ||  "Enter KG or CBM values to get Suggested Rate"}
+                    <Typography variant="h4" sx={{textAlign:"center"}}>
+                        {Suggested}
                     </Typography>
                 </CardContent>
             </Card>
+            
         </Box>
     )
 }
