@@ -10,6 +10,7 @@ export const NavList = () =>{
             <Card>
                 <CardContent>
                     <Grid container spacing={2}>
+                        <NavItem path="/login" title="Login" />
                         <NavItem path="/" title="Home" />
                         <NavItem path="/customerratekg" title="CustomerRateKG" />
                         <NavItem path="/customerratecbm" title="CustomerRateCBM" />

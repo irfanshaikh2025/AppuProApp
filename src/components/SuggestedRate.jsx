@@ -19,7 +19,6 @@ export const SuggestedRate = () =>{
                     </Typography>
                 </CardContent>
             </Card>
-            
         </Box>
     )
 }

@@ -44,10 +44,8 @@ const calculateKG=() =>{
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh", // Full screen height
+        height: "70vh", // Full screen height
         bgcolor: "#f5f5f5", // Light background
-        border: 1,
-        borderRadius: 2
       }}
     >
       <Card sx={{ width: 400, p: 2, boxShadow: 3, borderRadius: 2 }}>
