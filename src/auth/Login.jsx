@@ -7,14 +7,7 @@ export const Login = () => {
 
   return (
     <Box
-      sx={{
-        height: "70vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center"
-       }}
-    >
+      sx={{ height: "70vh", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
       <Typography variant="h4" mb={3}>
         Welcome In AppuProImports
       </Typography>
@@ -29,11 +22,6 @@ export const Login = () => {
     </Box>
   );
 };
-
-
-
-
-
 
 
 
